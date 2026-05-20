@@ -1,0 +1,355 @@
+<?php
+
+// ==========================
+// PART A: PHP if Statements
+// ==========================
+
+// Lab 1: Basic If Statement
+echo "<h3>Lab 1: Basic If Statement</h3>";
+
+$age = 18;
+
+if ($age >= 18) {
+    echo "You are eligible to vote";
+}
+
+echo "<hr>";
+
+
+// Lab 2: If-Else Statement
+echo "<h3>Lab 2: If-Else Statement</h3>";
+
+$number = -5;
+
+if ($number > 0) {
+    echo "Positive number";
+} else {
+    echo "Negative number";
+}
+
+echo "<hr>";
+
+
+// Lab 3: If-ElseIf Statement
+echo "<h3>Lab 3: If-ElseIf Statement</h3>";
+
+$grade = 85;
+
+if ($grade >= 90 && $grade <= 100) {
+    echo "Excellent";
+} elseif ($grade >= 80) {
+    echo "Good";
+} elseif ($grade >= 70) {
+    echo "Average";
+} else {
+    echo "Failed";
+}
+
+echo "<hr>";
+
+
+// Lab 4: Even or Odd Checker
+echo "<h3>Lab 4: Even or Odd Checker</h3>";
+
+$num = 12;
+
+if ($num % 2 == 0) {
+    echo "Even number";
+} else {
+    echo "Odd number";
+}
+
+echo "<hr>";
+
+
+// Lab 5: Largest of Three Numbers
+echo "<h3>Lab 5: Largest of Three Numbers</h3>";
+
+$num1 = 10;
+$num2 = 25;
+$num3 = 15;
+
+if ($num1 >= $num2 && $num1 >= $num3) {
+    echo "Largest number is: $num1";
+} elseif ($num2 >= $num1 && $num2 >= $num3) {
+    echo "Largest number is: $num2";
+} else {
+    echo "Largest number is: $num3";
+}
+
+echo "<hr>";
+
+
+// Lab 6: Password Checker
+echo "<h3>Lab 6: Password Checker</h3>";
+
+$password = "admin123";
+$userInput = "admin123";
+
+if ($userInput == $password) {
+    echo "Access Granted";
+} else {
+    echo "Access Denied";
+}
+
+echo "<hr>";
+
+
+// Lab 7: Leap Year Checker
+echo "<h3>Lab 7: Leap Year Checker</h3>";
+
+$year = 2024;
+
+if (($year % 4 == 0 && $year % 100 != 0) || ($year % 400 == 0)) {
+    echo "$year is a Leap Year";
+} else {
+    echo "$year is not a Leap Year";
+}
+
+echo "<hr>";
+
+
+// Lab 8: Nested If
+echo "<h3>Lab 8: Nested If</h3>";
+
+$age = 20;
+$citizenship = "Filipino";
+
+if ($age >= 18) {
+    if ($citizenship == "Filipino") {
+        echo "Eligible to vote";
+    } else {
+        echo "Not eligible to vote";
+    }
+} else {
+    echo "Not eligible to vote";
+}
+
+echo "<hr>";
+
+
+// Lab 9: Discount Calculator
+echo "<h3>Lab 9: Discount Calculator</h3>";
+
+$purchase = 1200;
+
+if ($purchase >= 1000) {
+    $discount = $purchase * 0.20;
+} elseif ($purchase >= 500) {
+    $discount = $purchase * 0.10;
+} else {
+    $discount = 0;
+}
+
+$total = $purchase - $discount;
+
+echo "Discount: $discount <br>";
+echo "Total Amount: $total";
+
+echo "<hr>";
+
+
+// Lab 10: Simple Login System
+echo "<h3>Lab 10: Simple Login System</h3>";
+
+$username = "admin";
+$password = "1234";
+
+$inputUser = "admin";
+$inputPass = "1234";
+
+if ($inputUser == $username && $inputPass == $password) {
+    echo "Login Successful";
+} else {
+    echo "Invalid Username or Password";
+}
+
+echo "<hr>";
+
+
+// ==============================
+// PART B: PHP switch Statements
+// ==============================
+
+
+// Lab 11: Day of the Week
+echo "<h3>Lab 11: Day of the Week</h3>";
+
+$day = 3;
+
+switch ($day) {
+    case 1:
+        echo "Monday";
+        break;
+    case 2:
+        echo "Tuesday";
+        break;
+    case 3:
+        echo "Wednesday";
+        break;
+    case 4:
+        echo "Thursday";
+        break;
+    case 5:
+        echo "Friday";
+        break;
+    case 6:
+        echo "Saturday";
+        break;
+    case 7:
+        echo "Sunday";
+        break;
+    default:
+        echo "Invalid input";
+}
+
+echo "<hr>";
+
+
+// Lab 12: Grade Description
+echo "<h3>Lab 12: Grade Description</h3>";
+
+$letterGrade = "B";
+
+switch ($letterGrade) {
+    case "A":
+        echo "Excellent";
+        break;
+    case "B":
+        echo "Good";
+        break;
+    case "C":
+        echo "Average";
+        break;
+    case "D":
+        echo "Poor";
+        break;
+    case "F":
+        echo "Failed";
+        break;
+    default:
+        echo "Invalid Grade";
+}
+
+echo "<hr>";
+
+
+// Lab 13: Simple Calculator
+echo "<h3>Lab 13: Simple Calculator</h3>";
+
+$a = 10;
+$b = 5;
+$operator = "+";
+
+switch ($operator) {
+    case "+":
+        echo $a + $b;
+        break;
+    case "-":
+        echo $a - $b;
+        break;
+    case "*":
+        echo $a * $b;
+        break;
+    case "/":
+        echo $a / $b;
+        break;
+    default:
+        echo "Invalid Operator";
+}
+
+echo "<hr>";
+
+
+// Lab 14: Menu Selection
+echo "<h3>Lab 14: Menu Selection</h3>";
+
+$choice = 2;
+
+switch ($choice) {
+    case 1:
+        echo "Add Selected";
+        break;
+    case 2:
+        echo "Edit Selected";
+        break;
+    case 3:
+        echo "Delete Selected";
+        break;
+    default:
+        echo "Invalid Choice";
+}
+
+echo "<hr>";
+
+
+// Lab 15: Month Name Generator
+echo "<h3>Lab 15: Month Name Generator</h3>";
+
+$month = 5;
+
+switch ($month) {
+    case 1:
+        echo "January";
+        break;
+    case 2:
+        echo "February";
+        break;
+    case 3:
+        echo "March";
+        break;
+    case 4:
+        echo "April";
+        break;
+    case 5:
+        echo "May";
+        break;
+    case 6:
+        echo "June";
+        break;
+    case 7:
+        echo "July";
+        break;
+    case 8:
+        echo "August";
+        break;  
+    case 9:
+        echo "September";
+        break;
+    case 10:
+        echo "October";
+        break;
+    case 11:
+        echo "November";
+        break;
+    case 12:
+        echo "December";
+        break;
+    default:
+        echo "Invalid Month";
+}
+
+echo "<hr>";
+
+
+// Lab 16: Traffic Light System
+echo "<h3>Lab 16: Traffic Light System</h3>";
+
+$color = "red";
+
+if ($color == "red") {
+    echo "Action: STOP";
+}
+elseif ($color == "yellow") {
+    echo "Action: READY";
+}
+elseif ($color == "green") {
+    echo "Action: GO";
+}
+else {
+    echo "Invalid traffic light color.";
+}
+
+echo "<hr>";
+
+?>
